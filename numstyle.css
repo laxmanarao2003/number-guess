@@ -4,6 +4,8 @@ input
 }
 .ltrspacing1
 {
+   user-select: none;
+   cursor: context-menu;
    letter-spacing: 0.6px;
 }
 .ltrspacing2
