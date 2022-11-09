@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>
+         Number-Guess
+      </title>
+      <meta name="author" content="Laxmana Rao">
+      <meta name="description" content="Kids-games">
+      <meta name="keywords" content="cards">
+      <meta name="viewport" content="initial-scale=1.0,width=device-width">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <meta http-equiv="refresh" content="">
+      <!----------------------------- FAVICON --------------------------------->
+      <link rel="icon" href=".\favicon.png" type="image/x-icon">
+
+      <!-------------------------External CSS ---------------------------------->
+      <link rel="stylesheet" href=".\numstyle.css" type="text/css">
+
+      <!----------------------------- Fontawesome-JS-CDN -------------------------->
+      <script src="https://kit.fontawesome.com/832f4883ab.js" crossorigin="anonymous"></script>
+
+      <!--------------------------- BOOTSTRAP-Css-CDN --------------------------->
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+      <!-- --------------------- BOOTSTRAP-JavaScript-CDN ---------------------------->
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+
+      <!------------------------ BOOTSTRAP-JQuery-CDN -------------------------->
+      <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+   </head>
+<body oncontextmenu="return false">
+
+<div class="d-flex justify-content-center container mt-5">
+   <div class="col-xl-6 col-lg-6 col-md-8 col-sm-11 text-center"> 
+      <div class=" bg-primary border rounded-3 px-5">
+         <h3 class="text-white px-5 py-2 ltrspacing1">Number Guessing Game</h3>
+      </div>
+      <h4 class="text-primary pt-4 ltrspacing2">Guess a Number between <span id="range">1-20</span></h4>
+      <div class="d-flex justify-content-center mt-5">
+         <input type="number" class="form-control w-50 py-3" id="userinp" placeholder="Can you Guess it!" min="0">
+      </div>
+      <div>
+         <button class="btn btn-success my-4 px-4 py-2 ltrspacing2" id="guessbtn">Guess</button>
+      </div>
+      <div class="bg-white border rounded-3 py-3 blurefct">
+         <p class="h6 ltrspacing2">Guessed number is: <span id="guessednbr">0</span></p>
+         <p class="h6 ltrspacing2">No.of guesses: <span id="guesses">0</span></p>
+      </div>
+      <div class="pt-4">
+         <p class="text-center h4 text-center ltrspacing1"><span id="comments">Guess is too high</span><i class="fa-sharp fa-solid fa-crown text-dark ps-1" id="emoji"></i></p>
+      </div>
+   </div>
+</div>
+<script src=".\guess.js"></script>
+</body>
+</html>
