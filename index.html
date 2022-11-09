@@ -2,7 +2,7 @@
 <html>
    <head>
       <title>
-         Cards-matching
+         Number-Guess
       </title>
       <meta name="author" content="Laxmana Rao">
       <meta name="description" content="Kids-games">
@@ -11,10 +11,10 @@
       <meta http-equiv="X-UA-Compatible" content="ie=edge">
       <meta http-equiv="refresh" content="">
       <!----------------------------- FAVICON --------------------------------->
-      <link rel="icon" href=".\favicon.jpg" type="image/x-icon">
+      <link rel="icon" href=".\favicon.png" type="image/x-icon">
 
       <!-------------------------External CSS ---------------------------------->
-      <link rel="stylesheet" href=".\guessstyle.css" type="text/css">
+      <link rel="stylesheet" href=".\numstyle.css" type="text/css">
 
       <!----------------------------- Fontawesome-JS-CDN -------------------------->
       <script src="https://kit.fontawesome.com/832f4883ab.js" crossorigin="anonymous"></script>
@@ -29,44 +29,28 @@
       <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
    </head>
 <body oncontextmenu="return false">
-<!--1 2 3 4    5 6 3 5     4 1 5 2 -->
-<div>
-   <h3 class="text-center py-4 ltrspacing1" style="user-select:none;">Memory Cards</h3>
-</div>
-   <div class="container-xxl container-xl container-lg">
-      <div class="container-xxl container-xl container-lg container-md">
-            <div class="cards row py-1">
-               <img src=".\card1.jpg" id="img1" class="card col-xxl-3 col-xl-3 col-lg-3 col-md-3 col-sm-3 img-thumbnail rounded px-2 ">
-               <img src=".\card2.jpg" id="img2" class="card col-xxl-3  col-xl-3 col-lg-3 col-md-3 col-sm-3 img-thumbnail rounded px-2 ">
-               <img src=".\card3.jpg" id="img3" class="card col-xxl-3 col-xl-3 col-lg-3 col-md-3 col-sm-3 img-thumbnail rounded px-2 ">
-               <img src=".\card4.jpg" id="img4" class="card col-xxl-3 col-xl-3 col-lg-3 col-md-3 col-sm-3 img-thumbnail rounded px-2">
-            </div>
-            <div class="cards row py-1">
-               <img src=".\card5.jpg" id="img5" class="card col-xxl-3 col-xl-3 col-lg-3 col-md-3 col-sm-3 img-thumbnail rounded px-2">
-               <img src=".\card6.jpg" id="img6" class="card col-xxl-3 col-xl-3 col-lg-3 col-md-3 col-sm-3 img-thumbnail rounded px-2">
-               <img src=".\card7.jpg" id="img7" class="card col-xxl-3 col-xl-3 col-lg-3 col-md-3 col-sm-3 img-thumbnail rounded px-2">
-               <img src=".\card8.jpg" id="img8" class="card col-xxl-3 col-xl-3 col-lg-3 col-md-3 col-sm-3 img-thumbnail rounded px-2">
-            </div>
-            <div class="cards row py-1">
-               <img src=".\card9.jpg" id="img9" class="card col-xxl-3 col-xl-3 col-lg-3 col-md-3 col-sm-3 img-thumbnail rounded px-2">
-               <img src=".\card10.jpg" id="img10" class="card col-xxl-3 col-xl-3 col-lg-3 col-md-3 col-sm-3 img-thumbnail rounded px-2">
-               <img src=".\card11.jpg" id="img11" class="card col-xxl-3 col-xl-3 col-lg-3 col-md-3 col-sm-3 img-thumbnail rounded px-2">
-               <img src=".\card12.jpg" id="img12" class="card col-xxl-3 col-xl-3 col-lg-3 col-md-3 col-sm-3 img-thumbnail rounded px-2 ">
-            </div>
+
+<div class="d-flex justify-content-center container my-5">
+   <div class="d-flex flex-column col-xl-5 col-lg-6 col-md-8 col-sm-10 border border-dark rounded-3 text-center my-2"> 
+      <div class="border border-success rounded-3 bg-primary px-3 mt-1 mx-1"> 
+         <h3 class="text-white px- py-2 ltrspacing1">Number Guessing Game</h3>
+      </div>
+      <h4 class="text-primary pt-4 px-4 ltrspacing2 text-wrap">Guess a Number between <span id="range">1-20</span></h4>
+      <div class="d-flex justify-content-center mt-5">
+         <input type="number" class="form-control w-50 py-3" id="userinp" placeholder="Can you Guess it!" min="0">
+      </div>
+      <div class="mt-3">
+         <button class="btn btn-success my-4 px-4 py-2 ltrspacing2" id="guessbtn">Guess</button>
+      </div>
+      <div class="bg-white border border-warning rounded-3 py-4 mx-3 mt-3  mb-2 blurefct">
+         <p class="h6 ltrspacing2">Guessed number is: <span id="guessednbr">0</span></p>
+         <p class="h6 ltrspacing2">No.of guesses: <span id="guesses">0</span></p>
+      </div>
+      <div class="pt-4 pb-3">
+         <p class="text-center h4 text-center ltrspacing1"><span id="comments">Guess is too high</span><i class="fa-sharp fa-solid fa-crown text-dark ps-1" id="emoji"></i></p>
       </div>
    </div>
-<div class="container-xxl container-xl container-lg mt-3">
-   <div class="row container-xxl container-xl container-lg container-md py-4 text-center">
-      <p class="col-xxl-3 col-xl-3 col-lg-3 col-md-3 col-sm-3 ltrspacing2">Guesses:<span id="guess"> 0</span></p>
-      <p class="col-xxl-3 col-xl-3 col-lg-3 col-md-3 col-sm-3 ltrspacing2">Matches:<span id="match"> 0</span></p>
-      <p class="col-xxl-3 col-xl-3 col-lg-3 col-md-3 col-sm-3 ltrspacing2">Percentage:<span id="percentage"> 0</span>%</p>
-      <p class="col-xxl-3 col-xl-3 col-lg-3 col-md-3 col-sm-3 ltrspacing2" id="matchtxt">Open cards!</p>
-   </div>
 </div>
-<div class="d-flex justify-content-center mb-3">
-   <a href=".\index.html" class="ltrspacing1 btn btn-outline-success px-5 py-2">Reset</a>
-</div>
-   <!------------------- EXTERNAL JS --------------------->
-   <script src=".\guessimgs.js"></script>
+<script src=".\guess.js"></script>
 </body>
 </html>
