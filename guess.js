@@ -16,6 +16,7 @@ guessbtn.addEventListener("click",()=>{
       comments.innerHTML="Invalid Number";
       guesses.innerHTML=count;
       emoji.style.visibility="hidden";
+      userinp.focus();
    }
    else if(val>20){
       userinp.value="";
