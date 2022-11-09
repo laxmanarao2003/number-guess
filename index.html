@@ -31,22 +31,22 @@
 <body oncontextmenu="return false">
 
 <div class="d-flex justify-content-center container mt-5">
-   <div class="col-xl-6 col-lg-6 col-md-8 col-sm-11 text-center"> 
-      <div class=" bg-primary border rounded-3 px-5">
-         <h3 class="text-white px-5 py-2 ltrspacing1">Number Guessing Game</h3>
+   <div class="d-flex flex-column col-xl-5 col-lg-6 col-md-8 col-sm-10 border border-dark rounded-3 text-center"> 
+      <div class="border border-success rounded-3 bg-primary px-3 mt-1 mx-1">
+         <h3 class="text-white px- py-2 ltrspacing1">Number Guessing Game</h3>
       </div>
-      <h4 class="text-primary pt-4 ltrspacing2">Guess a Number between <span id="range">1-20</span></h4>
+      <h4 class="text-primary pt-4 px-4 ltrspacing2 text-wrap">Guess a Number between <span id="range">1-20</span></h4>
       <div class="d-flex justify-content-center mt-5">
          <input type="number" class="form-control w-50 py-3" id="userinp" placeholder="Can you Guess it!" min="0">
       </div>
-      <div>
+      <div class="mt-3">
          <button class="btn btn-success my-4 px-4 py-2 ltrspacing2" id="guessbtn">Guess</button>
       </div>
-      <div class="bg-white border rounded-3 py-3 blurefct">
+      <div class="bg-white border border-warning rounded-3 py-4 mx-3 mt-3  mb-2 blurefct">
          <p class="h6 ltrspacing2">Guessed number is: <span id="guessednbr">0</span></p>
          <p class="h6 ltrspacing2">No.of guesses: <span id="guesses">0</span></p>
       </div>
-      <div class="pt-4">
+      <div class="pt-4 pb-3">
          <p class="text-center h4 text-center ltrspacing1"><span id="comments">Guess is too high</span><i class="fa-sharp fa-solid fa-crown text-dark ps-1" id="emoji"></i></p>
       </div>
    </div>
